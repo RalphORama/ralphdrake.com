@@ -11,6 +11,10 @@ body {
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
     }
 
     html, body {
@@ -18,29 +22,26 @@ body {
         padding: 0;
     }
 
+    ul, ol {
+        margin-top: 0;
+    }
+
     section {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     #intro {
         background-color: #FFFFFF;
     }
 
-    #info {
-        background-color: #E5E5E5;
-    }
-
-    #intro a {
+    #intro a, #intro a:hover, #intro a:visited {
         color: #000;
-    }
-
-    #intro a:hover {
         cursor: pointer;
     }
 
-    #intro a:visited {
-        color: #000;
+    #info {
+        background-color: #E5E5E5;
     }
 
     #projects {
@@ -49,19 +50,41 @@ body {
 
     footer {
         height: 2em;
-        text-align: center;
         line-height: 2em;
+        text-align: center;
 
         color: #FFFFFF;
         background-color: #404040;
     }
 
-    .center {
+    .center-abs {
         position: absolute;
         top: 50%;
         left: 50%;
         -moz-transform: translateX(-50%) translateY(-50%);
         -webkit-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #info table {
+        width: 100%;
+        height: 100%;
+    }
+
+    #info table th, #info table td {
+        width: 33%;
+        text-align: left;
+        padding: 5px;
+    }
+
+    #info table td {
+        vertical-align: top;
+
+    }
+
+    #info table td:nth-child(2) {
+        text-indent: 2em;
     }
 }
