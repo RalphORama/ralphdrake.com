@@ -20,25 +20,34 @@
     <section id="info">
       <table>
         <tr>
-          <th><h3>Project</h3> <hr></th>
-          <th><h3>Accomplishments</h3> <hr></th>
-          <th><h3>Notes</h3> <hr></th>
+          <th class="project-col"><h3>Project</h3> <hr></th>
+          <th class="accomp-col"><h3>Accomplishments</h3> <hr></th>
+          <th class="notes-col"><h3>Notes</h3> <hr></th>
         </tr>
         <!-- Notes on SamSchindler.com -->
         <tr>
           <!-- Name -->
-          <td>&bull; <a href="http://samschindler.com">samschindler.com</a></td>
+          <td class="project-col">&bull; <a href="http://samschindler.com">samschindler.com</a></td>
           <!-- Accomplishments -->
-          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet eleifend dolor, ut pellentesque neque sagittis a. Vivamus congue felis quis varius tristique. Nulla facilisi. Nulla laoreet, turpis in dapibus iaculis, sem elit sagittis lectus, vitae vehicula nulla odio quis justo. Phasellus quam urna, ultrices scelerisque sapien ut, porta vehicula felis. Nulla vel magna bibendum, tincidunt eros non, dignissim leo. Nulla pretium ex sed consequat rhoncus. Maecenas eu justo quam. Phasellus quis eleifend felis. Nam nec dui id nibh blandit rhoncus et ac nibh. Mauris tempor sit amet libero quis viverra. Suspendisse ut finibus enim.</td>
+          <td class="accomp-col">Created a homepage for Sam Schindler, a teacher and activist based in Lancaster, PA. He now uses this site to host his podcast, "What We Will Abide." He also uses the site to distribute information about his tutoring, his work for the TBA School of Lancaster, and his CV.</td>
           <!-- Notes -->
-          <td>
+          <td class="notes-col">
             <ul>
-              <li>An initial version of the site was created from scratch before switching to the WordPress setup that is active now.</li>
-              <li></li>
-              <li></li>
+              <li>An initial version of the site was created from scratch using Bootstrap before switching to the WordPress setup that is active now.</li>
+              <li>This was my first experience with Bluehost, and probably my last. I found their control panel's UX very unintuitive.</li>
+              <li>Since getting the site up and running, I haven't had to intervene. Mr. Schindler handles everything on there himself.</li>
             </ul>
           </td>
         </tr>
+        <!-- Notes on CoreRP.co -->
+        <td class="project-col">&bull; <a href="https://corerp.co">CoreRP.co</a></td>
+        <td class="accomp-col">Currenlty on hiatus as I attend college, CoreRP (formerly MonkeyStrikeGaming) was my fledgling gaming community. Originally created for my friends in high school, CoreRP grew to about 100 members between 2012 and 2014. I used CoreRP as a tool for teaching myself full-stack DevOps, as everything was hosted on a dedicated server I purchased from OVH. Over my past several years administrating the server, I've learned many things about security, deploying webservers, configuring microservices, and, most recently, using Docker to containerize gameservers.</td>
+        <td class="notes-col">
+          <ul>
+            <li>Over the server's 6-year lifespan, we've never had a security incident thanks to key-based authentication and code auditing.</li>
+            <li>I still host gameservers on the CoreRP server for my friend Otterfiend and his group <a href="https://steamcommunity.com/groups/ClassicBonanza">Classic Bonanza</a>.</li>
+          </ul>
+        </td>
       </table>
     </section>
     <section id="projects">

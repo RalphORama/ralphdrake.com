@@ -74,7 +74,6 @@ body {
     }
 
     #info table th, #info table td {
-        width: 33%;
         text-align: left;
         padding: 5px;
     }
@@ -86,5 +85,17 @@ body {
 
     #info table td:nth-child(2) {
         text-indent: 2em;
+    }
+
+    .project-col {
+        width: 20%;
+    }
+
+    .accomp-col {
+        width: 50%;
+    }
+
+    .notes-col {
+        width: 30%;
     }
 }
