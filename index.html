@@ -10,6 +10,20 @@
 </head>
 <body>
   <div id="container">
+    <!-- Begin overlay for small devices that aren't supported -->
+    <div id="mobile-warning">
+      <div class="center-abs">
+        <h1>Hi.</h1>
+        <p>This site doesn't work on mobile just yet. Check back later or visit again on your desktop.</p>
+      </div>
+      <div id="mobile-warning-footer">
+        <hr>
+        <span><a href="mailto:ralph@ralphdrake.com">email</a> | <a href="https://github.com/RalphORama">github</a> | <a href="">resume</a></span>
+      </div>
+    </div>
+    <!-- End small device warning overlay -->
+
+    <!-- Begin introductory section -->
     <section id="intro">
       <div class="center-abs">
         <h1>Ralph Drake</h1>
@@ -17,7 +31,15 @@
         <a href="#info"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
       </div>
     </section>
+    <!-- End introductory section -->
+
+    <!-- Begin information section -->
     <section id="info">
+    </section>
+    <!-- End information section -->
+
+    <!-- Begin projects section -->
+    <section id="projects">
       <table>
         <tr>
           <th class="project-col"><h3>Project</h3> <hr></th>
@@ -27,7 +49,7 @@
         <!-- Notes on SamSchindler.com -->
         <tr>
           <!-- Name -->
-          <td class="project-col">&bull; <a href="http://samschindler.com">samschindler.com</a></td>
+          <td class="project-col"><h3><a href="http://samschindler.com">samschindler.com</a></h3></td>
           <!-- Accomplishments -->
           <td class="accomp-col">Created a homepage for Sam Schindler, a teacher and activist based in Lancaster, PA. He now uses this site to host his podcast, "What We Will Abide." He also uses the site to distribute information about his tutoring, his work for the TBA School of Lancaster, and his CV.</td>
           <!-- Notes -->
@@ -40,7 +62,7 @@
           </td>
         </tr>
         <!-- Notes on CoreRP.co -->
-        <td class="project-col">&bull; <a href="https://corerp.co">CoreRP.co</a></td>
+        <td class="project-col"><h3><a href="https://corerp.co">CoreRP.co</a></h3></td>
         <td class="accomp-col">Currenlty on hiatus as I attend college, CoreRP (formerly MonkeyStrikeGaming) was my fledgling gaming community. Originally created for my friends in high school, CoreRP grew to about 100 members between 2012 and 2014. I used CoreRP as a tool for teaching myself full-stack DevOps, as everything was hosted on a dedicated server I purchased from OVH. Over my past several years administrating the server, I've learned many things about security, deploying webservers, configuring microservices, and, most recently, using Docker to containerize gameservers.</td>
         <td class="notes-col">
           <ul>
@@ -50,11 +72,13 @@
         </td>
       </table>
     </section>
-    <section id="projects">
+    <!-- End projects section -->
 
-    </section>
+    <!-- Begin footer -->
     <footer>
+      <!-- This is automatically filled via homepage.js -->
     </footer>
+    <!-- End footer -->
   </div>
 
   <script src="./js/jquery-3.1.1.min.js"></script>
