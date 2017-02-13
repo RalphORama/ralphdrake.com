@@ -14,7 +14,5 @@
       $('html, body').animate({scrollTop: $(target).offset().top}, delay * 1000)
       return false
     })
-    console.log('Created listener for ' + elem + ' to ' + target + ' with delay of ' +
-        delay + '.')
   }
 })()
