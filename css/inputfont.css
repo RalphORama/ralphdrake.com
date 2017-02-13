@@ -2,26 +2,30 @@
     font-family: 'Input Mono';
     font-style: normal;
     font-weight: normal;
-    src: url(../fonts/input/regular.ttf) format('truetype');
+    src: url('../fonts/input/regular.woff') format('woff'),
+         url('../fonts/input/regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Input Mono';
     font-style: italic;
     font-weight: normal;
-    src: url(../fonts/input/italic.ttf) format('truetype');
+    src: url('../fonts/input/italic.woff') format('woff'),
+         url('../fonts/input/italic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Input Mono';
     font-style: normal;
     font-weight: bold;
-    src: url(../fonts/input/bold.ttf) format('truetype');
+    src: url('../fonts/input/bold.woff') format('woff'),
+         url('../fonts/input/bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Input Mono';
     font-style: italic;
     font-weight: bold;
-    src: url(../fonts/input/bolditalic.ttf) format('truetype');
+    src: url('../fonts/input/bold.woff') format('woff'),
+         url('../fonts/input/bolditalic.ttf') format('truetype');
 }
