@@ -79,7 +79,7 @@
 
     /* Classes */
     .inputmono {
-        font-family: 'Input Mono', monospace;
+        font-family: 'Input Mono', 'Lucida Console', Monaco, monospace;
     }
 
     .metropolis {
@@ -90,17 +90,15 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+        -moz-transform:     translateX(-50%) translateY(-50%);
+        -webkit-transform:  translateX(-50%) translateY(-50%);
+        transform:          translateX(-50%) translateY(-50%);
     }
 
     .section-nav {
         width: 100%;
         padding: 1pt;
         text-align: center;
-
-        font-family: 'Input Mono', monospace;
     }
 
     .section-nav h3 {
