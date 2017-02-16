@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/metropolis/regular.woff') format('woff'),
+         url('../fonts/metropolis/regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-style: italic;
+    font-weight: normal;
+    src: url('../fonts/metropolis/italic.woff') format('woff'),
+         url('../fonts/metropolis/italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/metropolis/bold.woff') format('woff'),
+         url('../fonts/metropolis/bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    font-style: italic;
+    font-weight: bold;
+    src: url('../fonts/metropolis/bold.woff') format('woff'),
+         url('../fonts/metropolis/bolditalic.ttf') format('truetype');
+}

@@ -1,9 +1,6 @@
 @import url('./inputfont.css');
+@import url('./metropolisfont.css');
 @import url('./font-awesome.min.css');
-
-body {
-    font-family: 'Input Mono', monospace;
-}
 
 /* Universal styles */
 @media only screen {
@@ -42,7 +39,7 @@ body {
         line-height: 2em;
         text-align: center;
 
-        color: #FFFFFF;
+        color: #FFF;
         background-color: #404040;
     }
 
@@ -56,11 +53,11 @@ body {
     }
 
     #info {
-        background-color: #E5E5E5;
+        background-color: #FAFAFA;
     }
 
     #projects {
-        background-color: #BFBFBF;
+        background-color: #F0F0F0;
     }
 
     #projects table {
@@ -71,7 +68,7 @@ body {
     #projects table th, #info table td {
         padding: 4pt;
     }
-    
+
     #projects table td {
         vertical-align: top;
     }
@@ -81,6 +78,14 @@ body {
     }
 
     /* Classes */
+    .inputmono {
+        font-family: 'Input Mono', monospace;
+    }
+
+    .metropolis {
+        font-family: 'Metropolis', Arial, Helvetica, sans-serif;
+    }
+
     .center-abs {
         position: absolute;
         top: 50%;
@@ -94,6 +99,8 @@ body {
         width: 100%;
         padding: 1pt;
         text-align: center;
+
+        font-family: 'Input Mono', monospace;
     }
 
     .section-nav h3 {
