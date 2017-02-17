@@ -6,18 +6,18 @@
 @media only screen {
     /* element rules */
     * {
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        text-rendering:             optimizeLegibility;
+        -webkit-font-smoothing:     antialiased;
+        -moz-osx-font-smoothing:    grayscale;
 
         -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+        -moz-box-sizing:    border-box;
+        box-sizing:         border-box;
     }
 
     html, body {
-        margin: 0;
-        padding: 0;
+        margin:     0;
+        padding:    0;
     }
 
     ul, ol {
@@ -140,41 +140,31 @@
 }
 
 /* Tablets / small screens */
-@media only screen and (min-width: 900px) {
-    .project-col {
-        width: 10%;
-    }
-
-    .accomp-col {
-        width: 40%;
-    }
-
-    .notes-col {
-        width: 50%;
-    }
-
-    td h3 {
-        font-size: 1.1em;
-    }
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
 }
 
 /* Desktops / large screens */
 @media only screen and (min-width: 1200px) {
-    .project-col {
-        width: 15%;
+    #jumbotron {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        overflow: scroll;
     }
 
-    .accomp-col {
-        width: 50%;
+    .jt-panel {
+        width: 100%;
+        height: 100%;
+        /*float: left;*/
+        display: inline;
+
+        padding: 0 10pt 0 10pt;
+
+        /*display: inline-block;*/
     }
 
-    .notes-col {
-        width: 45%;
-    }
-
-    td.project-col a {
-        margin-left: 2em;
+    .jt-clear {
+        clear: both;
     }
 }
-
-
