@@ -20,7 +20,7 @@
 
     var newPanel = `
     <div class="project">
-      <h1>${title}</h1>
+      <a href="https://${title}"><h1>${title}</h1></a>
       <p>${description}</p>
       <ul>${notesText}</ul>
       <hr>

@@ -53,6 +53,18 @@
         background-color: #FFFFFF;
     }
 
+    .project hr:last-of-type {
+        display: none;
+    }
+
+    .project li {
+        list-style-type: square;
+    }
+
+    .project a {
+        text-decoration: none;
+    }
+
     /* Classes */
     .inputmono {
         font-family: 'Input Mono', 'Lucida Console', Monaco, monospace;
@@ -135,15 +147,10 @@
 
     .project li {
         width: 75%;
-        list-style-type: square;
     }
 
     .project hr {
         width: 20%;
         margin: 0;
-    }
-
-    .project hr:last-of-type {
-        display: none;
     }
 }
