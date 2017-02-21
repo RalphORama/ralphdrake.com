@@ -10,9 +10,8 @@
     })
   }
 
-  function addJumbotronPanel (num, title, description, notes) {
-    var jt = document.getElementById('jumbotron')
-    var offset = num * window.screen.width
+  function addProject (title, description, notes) {
+    var projectsSeciton = document.getElementById('projects')
     var notesText = ''
 
     for (var i = 0; i < notes.length; ++i) {
@@ -20,13 +19,14 @@
     }
 
     var newPanel = `
-    <div class="jt-panel" style="margin-left: ${offset}px;">
+    <div class="project">
       <h1>${title}</h1>
       <p>${description}</p>
       <ul>${notesText}</ul>
+      <hr>
     </div>`
 
-    jt.innerHTML += newPanel
+    projectsSeciton.innerHTML += newPanel
   }
 
   addScrollListener('a[href="#info"]', '#info')
@@ -35,9 +35,8 @@
   footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
 
   $.getJSON('/projects.json', function (jdata) {
-    var count = 0
-    $.each(jdata, function (_, key) {
-      addJumbotronPanel(count++, key['name'], key['accomplishments'], key['notes'])
+    $.each(jdata, function (key, value) {
+      addProject(key, value['accomplishments'], value['notes'])
     })
   })
 })()
