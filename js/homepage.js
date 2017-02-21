@@ -3,7 +3,7 @@
   var today = new Date()
   var footer = document.getElementsByTagName('footer')[0]
 
-  function addScrollListener (elem, target, delay = 1) {
+  function addNavListener (elem, target, delay = 1) {
     $(elem).click(function () {
       $('html, body').animate({scrollTop: $(target).offset().top}, delay * 1000)
       return false
@@ -29,9 +29,11 @@
     projectsSeciton.innerHTML += newPanel
   }
 
-  addScrollListener('a[href="#info"]', '#info')
-  addScrollListener('a[href="#intro"]', '#intro')
-  addScrollListener('a[href="#projects"]', '#projects')
+  // Cre
+  addNavListener('a[href="#info"]', '#info')
+  addNavListener('a[href="#intro"]', '#intro')
+  addNavListener('a[href="#projects"]', '#projects')
+
   footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
 
   $.getJSON('/projects.json', function (jdata) {

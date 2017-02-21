@@ -130,6 +130,7 @@
     .project {
         width: 80%;
         margin: 0 auto;
+        padding-bottom: 12pt;
     }
 
     .project li {
