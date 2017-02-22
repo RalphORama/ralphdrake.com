@@ -61,7 +61,7 @@
         list-style-type: square;
     }
 
-    .project a {
+    .project h1 a {
         text-decoration: none;
     }
 
@@ -139,6 +139,25 @@
 
 /* Desktops / large screens */
 @media only screen and (min-width: 1200px) {
+    .description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .description img {
+        float: left;
+        width: 283px;
+        height: 336px;
+
+        margin-right: 12pt;
+
+        border-radius: 16px;
+    }
+
+    .description p {
+        text-indent: 12pt;
+    }
+
     .project {
         width: 80%;
         margin: 0 auto;
