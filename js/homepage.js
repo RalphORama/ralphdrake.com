@@ -34,7 +34,6 @@
       <h1><a href="https://${title}">${title}</a></h1>
       <p>${description}</p>
       <ul>${notesText}</ul>
-      <hr>
     </div>`
 
     projectsSeciton.innerHTML += newPanel

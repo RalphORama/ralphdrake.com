@@ -53,10 +53,6 @@
         background-color: #FFFFFF;
     }
 
-    .project hr:last-of-type {
-        display: none;
-    }
-
     .project li {
         list-style-type: square;
     }
@@ -150,6 +146,7 @@
         height: 336px;
 
         margin-right: 12pt;
+        margin-bottom: 12pt;
 
         border-radius: 16px;
     }
