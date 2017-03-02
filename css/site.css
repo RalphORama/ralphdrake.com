@@ -46,10 +46,14 @@
     }
 
     #info {
+        margin-top: 2em;
+        padding-top: 2em;
         background-color: #FAFAFA;
     }
 
     #projects {
+        margin-top: 2em;
+        padding-top: 2em;
         background-color: #FFFFFF;
     }
 
@@ -85,14 +89,24 @@
         transform:          translateX(-50%) translateY(-50%);
     }
 
-    .section-nav {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding: 1pt;
+        height: 2em;
+
+        line-height: 2em;
         text-align: center;
+
+        background-color: #aaa; /*todo: change this*/
+        z-index: 10;
     }
 
-    .section-nav h3 {
+    nav a, nav h3 {
         display: inline-block;
+        padding: 1pt 6pt 1pt 6pt;
+        margin: 0;
     }
 }
 
