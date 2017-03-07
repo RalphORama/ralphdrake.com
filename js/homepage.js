@@ -14,12 +14,31 @@
   var aboutFile = '/about.md'
   var projectsFile = '/projects.json'
 
-  function addNavListener (elem, target, delay = 1) {
-    $(elem).click(function () {
-      $('html, body').animate({scrollTop: $(target).offset().top}, delay * 1000)
-      return false
+  // Enable scrollify for nice scrolling
+  $(function () {
+    $.scrollify({
+      section: 'section'
     })
-  }
+  })
+
+  $('a[href="#info"]').click(function () {
+    $.scrollify.move('#info')
+    return false
+  })
+
+  footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
+
+  // Populate the about section with our markdown file
+  $.get(aboutFile, function (data) {
+    $('.description').html(converter.makeHtml(data))
+  })
+
+  // Automatically populate the 'projects' section
+  $.getJSON(projectsFile, function (jdata) {
+    $.each(jdata, function (key, value) {
+      addProject(key, value['accomplishments'], value['notes'])
+    })
+  })
 
   function addProject (title, description, notes) {
     var projectsSeciton = document.getElementById('projects')
@@ -38,33 +57,4 @@
 
     projectsSeciton.innerHTML += newPanel
   }
-
-  addNavListener('a[href="#info"]', '#info')
-  addNavListener('a[href="#intro"]', '#intro')
-  addNavListener('a[href="#projects"]', '#projects')
-
-  footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
-
-  // Populate the about section with our markdown file
-  $.get(aboutFile, function (data) {
-    $('.description').html(converter.makeHtml(data))
-  })
-
-  // Automatically populate the 'projects' section
-  $.getJSON(projectsFile, function (jdata) {
-    $.each(jdata, function (key, value) {
-      addProject(key, value['accomplishments'], value['notes'])
-    })
-  })
-
-  // Hide the navbar, then set up our navbar scroll logic
-  $('nav').hide()
-
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > $('#intro').outerHeight()) {
-      $('nav').fadeIn()
-    } else {
-      $('nav').fadeOut()
-    }
-  })
 })()

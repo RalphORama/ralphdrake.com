@@ -14,27 +14,8 @@
 </head>
 <body>
   <div id="container">
-    <!-- Begin overlay for small devices that aren't supported -->
-    <div id="mobile-warning" class="inputmono">
-      <div class="center-abs">
-        <h1>Hi.</h1>
-        <p>This site doesn't work on mobile just yet. Check back later or visit again on your desktop.</p>
-      </div>
-      <div id="mobile-warning-footer">
-        <hr>
-        <span><a href="mailto:ralph@ralphdrake.com">email</a> | <a href="https://github.com/RalphORama">github</a> | <a href="">resume</a></span>
-      </div>
-    </div>
-    <!-- End small device warning overlay -->
-
-    <nav class="inputmono">
-      <h3>Home</h3>
-      <h3>About</h3>
-      <h3>Projects</h3>
-    </nav>
-
     <!-- Begin introductory section -->
-    <section id="intro" class="inputmono">
+    <section id="intro" data-section-name="intro" class="inputmono">
       <div class="center-abs">
         <h1>Ralph Drake</h1>
         <h3>Digital Handyman</h3>
@@ -44,14 +25,15 @@
     <!-- End introductory section -->
 
     <!-- Begin information section -->
-    <section id="info" class="metropolis">
+    <section id="info" data-section-name="info" class="metropolis">
       <div class="description">
+        <!-- This is automatically filled by homepage.js -->
       </div>
     </section>
     <!-- End information section -->
 
     <!-- Begin projects section -->
-    <section id="projects" class="metropolis">
+    <section id="projects" data-section-name="projects" class="metropolis">
       <!-- This is automatically filled by homepage.js -->
     </section>
     <!-- End projects section -->
