@@ -56,4 +56,15 @@
       addProject(key, value['accomplishments'], value['notes'])
     })
   })
+
+  // Hide the navbar, then set up our navbar scroll logic
+  $('nav').hide()
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > $('#intro').outerHeight()) {
+      $('nav').fadeIn()
+    } else {
+      $('nav').fadeOut()
+    }
+  })
 })()
