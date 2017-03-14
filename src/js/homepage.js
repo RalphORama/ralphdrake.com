@@ -14,21 +14,17 @@
   var aboutFile = '/about.md'
   var projectsFile = '/projects.json'
 
-  // Enable scrollify for nice scrolling
-  $(function () {
-    $.scrollify({
-      section: 'section',
-      interstitialSection: 'footer',
-      offset: 12
-    })
-  })
+  footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
 
+  // Scroll down on click :O
   $('a[href="#info"]').click(function () {
-    $.scrollify.move('#info')
+    var target = $('#info')
+    if (target.length) {
+      var top = target.offset().top
+      $('html, body').animate({scrollTop: top})
+    }
     return false
   })
-
-  footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
 
   // Populate the about section with our markdown file
   $.get(aboutFile, function (data) {
@@ -43,19 +39,16 @@
   })
 
   function addProject (title, description, notes) {
-    var projectsSeciton = document.getElementById('projects')
     var notesText = ''
 
     for (var i = 0; i < notes.length; ++i) {
       notesText += '<li>' + notes[i] + '</li>'
     }
 
-    var newPanel = '<div class="project">' +
+    $('#projects').append('<div class="project">' +
       '<h1><a href="https://' + title + '">' + title + '</a></h1>' +
       '<p>' + description + '</p>' +
       '<ul>' + notesText + '</ul>' +
-    '</div>'
-
-    projectsSeciton.innerHTML += newPanel
+    '</div>')
   }
 })()

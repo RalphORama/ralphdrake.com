@@ -31,7 +31,6 @@ module.exports = function (grunt) {
           'dist/js/site.min.js': [
             'node_modules/showdown/dist/showdown.min.js',
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/jquery-scrollify/jquery.scrollify.min.js',
             'src/js/homepage.js'
           ]
         }
@@ -84,8 +83,10 @@ module.exports = function (grunt) {
       }
     },
 
-    // Clean up our tmp directory
-    clean: ['tmp/']
+    clean: {
+      dist: ['dist/'],
+      tmp: ['tmp/']
+    }
   })
 
   // Load all grunt plugins
@@ -98,5 +99,5 @@ module.exports = function (grunt) {
 
   // Default task(s).
   grunt.registerTask('default',
-    ['cssmin', 'uglify', 'processhtml', 'htmlmin', 'copy', 'clean'])
+    ['clean:dist', 'cssmin', 'uglify', 'processhtml', 'htmlmin', 'copy', 'clean:tmp'])
 }
