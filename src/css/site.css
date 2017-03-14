@@ -28,7 +28,7 @@
         border-bottom: 1pt solid rgb(50, 50, 50);
     }
 
-    footer, footer a {
+    footer, footer a, footer a:hover, footer a:visited {
         height: 2em;
         line-height: 2em;
         text-align: center;
