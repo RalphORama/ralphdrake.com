@@ -2,13 +2,14 @@
 
 ## About
 
-This is the code that runs my personal website, [ralphdrake.com](https://ralphdrake.com). It's not deployed there right now, as it's still incomplete.
+This is the code that runs my personal website, [ralphdrake.com](https://ralphdrake.com).
 
 ## Setup
 
 1. Clone the project into any given directory
-2. Run `npm install && grunt`
-3. Point NGINX or Apache at the `dist` folder
+2. Make sure you have [Grunt-CLI](https://github.com/gruntjs/grunt-cli) installed (`npm install -g grunt-cli`)
+3. Run `npm install && grunt`
+4. Point NGINX or Apache at the `dist` folder
 
 ## Roadmap
 
