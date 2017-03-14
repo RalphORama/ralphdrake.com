@@ -36,6 +36,10 @@
         background-color: #404040;
     }
 
+    #info, #projects {
+        padding-top: 12pt;
+    }
+
     .project li {
         list-style-type: square;
     }
@@ -76,7 +80,6 @@
     .description {
         width: 80%;
         margin: 0 auto;
-        padding-top: 12pt;
     }
 
     .description img {

@@ -17,7 +17,9 @@
   // Enable scrollify for nice scrolling
   $(function () {
     $.scrollify({
-      section: 'section'
+      section: 'section',
+      interstitialSection: 'footer',
+      offset: 12
     })
   })
 
