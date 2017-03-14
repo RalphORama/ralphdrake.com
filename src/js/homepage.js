@@ -14,29 +14,63 @@
   var aboutFile = '/about.md'
   var projectsFile = '/projects.json'
 
-  footer.innerHTML = '<span>&copy; ' + today.getFullYear() + ' Ralph Drake</span>'
+  initFooter(initAbout)
 
-  // Scroll down on click :O
-  $('a[href="#info"]').click(function () {
-    var target = $('#info')
-    if (target.length) {
-      var top = target.offset().top
-      $('html, body').animate({scrollTop: top})
-    }
-    return false
-  })
+  function initFooter (callback) {
+    console.log('initFooter()...')
+    footer.innerHTML = '<span>' +
+      '&copy; ' + today.getFullYear() + ' Ralph Drake' + ' | ' +
+      '<a href="https://github.com/RalphORama/ralphdrake.com">GitHub</a>' +
+      '</span>'
 
-  // Populate the about section with our markdown file
-  $.get(aboutFile, function (data) {
-    $('.description').html(converter.makeHtml(data))
-  })
+    callback(initProjects)
+  }
 
-  // Automatically populate the 'projects' section
-  $.getJSON(projectsFile, function (jdata) {
-    $.each(jdata, function (key, value) {
-      addProject(key, value['accomplishments'], value['notes'])
+  function initAbout (callback) {
+    console.log('initAbout()...')
+    // Populate the about section with our markdown file
+    $.get(aboutFile, function (data) {
+      $('.description').html(converter.makeHtml(data))
     })
-  })
+
+    callback(initAnchors)
+  }
+
+  function initProjects (callback) {
+    console.log('initProjects()...')
+    // Automatically populate the 'projects' section
+    $.getJSON(projectsFile, function (jdata) {
+      $.each(jdata, function (key, value) {
+        addProject(key, value['accomplishments'], value['notes'])
+      })
+    })
+
+    callback()
+  }
+
+  function initAnchors () {
+    console.log('initAnchors()...')
+
+    createScroll('a[href="#info"]', '#info', 1000)
+
+    // Something weird happens when filling the markdown, so this has to have
+    // a delay (otherwise it fails). Not sure what's up, not even a callback
+    // could fix this.
+    window.setTimeout(function () {
+      createScroll('a[href="#projects"]', '#projects', 1000)
+    }, 250)
+  }
+
+  function createScroll (elem, target, duration) {
+    $(elem).click(function () {
+      var t = $(target)
+      if (t.length) {
+        var top = t.offset().top
+        $('html, body').animate({scrollTop: top}, duration)
+        return false
+      }
+    })
+  }
 
   function addProject (title, description, notes) {
     var notesText = ''

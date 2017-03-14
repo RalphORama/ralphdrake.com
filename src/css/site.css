@@ -21,9 +21,14 @@
     section {
         width: 100%;
         min-height: 100vh;
+
+        box-sizing:         border-box;
+        -moz-box-sizing:    border-box;
+        -webkit-box-sizing: border-box;
+        border-bottom: 1pt solid rgb(50, 50, 50);
     }
 
-    footer {
+    footer, footer a {
         height: 2em;
         line-height: 2em;
         text-align: center;
@@ -80,7 +85,6 @@
 
     .description img {
         float: left;
-        width: 283px;
         height: 336px;
 
         margin-right: 12pt;

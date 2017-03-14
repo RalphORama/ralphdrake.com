@@ -1,5 +1,7 @@
 ![headshot](/img/headshot.jpg)
 
+# About Me
+
 Hi. I'm Ralph Drake: jack–of–all–trades, master of some. I've always had a habit of tinkering with computers, now I'm trying to create a career of it.
 
 I absolutely love computer science, and I jump at every opportunity presented to me in the field. I've worked on games, web sites, Google Chrome extensions, and extensive back-end development. Four years ago, I purchased a dedicated server through OVH — I've used it as a resource to teach myself full-stack server management, DevOps, web hosting, and programming.
