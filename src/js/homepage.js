@@ -47,15 +47,14 @@
     var notesText = ''
 
     for (var i = 0; i < notes.length; ++i) {
-      notesText += `<li>${notes[i]}</li>`
+      notesText += '<li>' + notes[i] + '</li>'
     }
 
-    var newPanel = `
-    <div class="project">
-      <h1><a href="https://${title}">${title}</a></h1>
-      <p>${description}</p>
-      <ul>${notesText}</ul>
-    </div>`
+    var newPanel = '<div class="project">' +
+      '<h1><a href="https://' + title + '">' + title + '</a></h1>' +
+      '<p>' + description + '</p>' +
+      '<ul>' + notesText + '</ul>' +
+    '</div>'
 
     projectsSeciton.innerHTML += newPanel
   }

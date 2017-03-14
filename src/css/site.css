@@ -1,7 +1,3 @@
-@import url('./inputfont.css');
-@import url('./metropolisfont.css');
-@import url('./font-awesome.min.css');
-
 /* Universal styles */
 @media only screen {
     html, body {
