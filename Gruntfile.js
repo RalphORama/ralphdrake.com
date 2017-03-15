@@ -31,6 +31,7 @@ module.exports = function (grunt) {
           'dist/js/site.min.js': [
             'node_modules/showdown/dist/showdown.min.js',
             'node_modules/jquery/dist/jquery.min.js',
+            'src/js/analytics.js',
             'src/js/homepage.js'
           ]
         }
