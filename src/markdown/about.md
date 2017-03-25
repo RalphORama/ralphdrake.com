@@ -10,4 +10,6 @@ Since 2010, I've tried to get my hands on as many resources to learn about progr
 
 My life isn't 100% computers, however. I love acting, playing bass guitar, and videography. I've worked on many projects in all these fields — I've participated in roughly 20 plays since I was fourteen, I played bass guitar in orchestra and jazz band for three years in high school, and I filmed a few mini-documentaries for class projects.
 
-I'm constantly seeking out ways to merge the arts and computer science, mainly so I can participate in projects that involve two or more of my favorite things at once. Most notably, I created posters, designed programs, and filmed teasers for the Lancaster Country Day School Theatre Company. You can read more about this in the [projects section](#projects) below.
+I'm constantly seeking out ways to merge the arts and computer science, mainly so I can participate in projects that involve two or more of my favorite things at once. Most notably, I created posters, designed programs, and filmed teasers for the Lancaster Country Day School Theatre Company. You can read more about this in the projects section below.
+
+---

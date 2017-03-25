@@ -3,7 +3,7 @@
   var today = new Date()
 
   var converterOptions = {
-    'noHeaderId': false,
+    'noHeaderId': true,
     'simplifiedAutoLink': true,
     'tasklists': true
   }

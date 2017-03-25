@@ -73,11 +73,11 @@ module.exports = function (grunt) {
             dest: 'dist/'
           },
 
-          // Copy our images and fonts
+          // Copy our images, fonts, and markdown files
           {
             expand: true,
             cwd: 'src/',
-            src: ['img/**', 'fonts/**'],
+            src: ['img/**', 'fonts/**', 'markdown/**'],
             dest: 'dist/'
           }
         ]
