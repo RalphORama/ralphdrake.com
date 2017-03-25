@@ -11,8 +11,8 @@
 
   var footer = document.getElementsByTagName('footer')[0]
 
-  var aboutFile = '/about.md'
-  var projectsFile = '/projects.json'
+  var aboutFile = '/markdown/about.md'
+  var projectsFile = '/markdown/projects.md'
 
   initFooter(initAbout)
 
@@ -39,10 +39,8 @@
   function initProjects (callback) {
     console.log('initProjects()...')
     // Automatically populate the 'projects' section
-    $.getJSON(projectsFile, function (jdata) {
-      $.each(jdata, function (key, value) {
-        addProject(key, value['accomplishments'], value['notes'])
-      })
+    $.get(projectsFile, function (data) {
+      $('#projects').html(converter.makeHtml(data))
     })
 
     callback()
@@ -70,19 +68,5 @@
         return false
       }
     })
-  }
-
-  function addProject (title, description, notes) {
-    var notesText = ''
-
-    for (var i = 0; i < notes.length; ++i) {
-      notesText += '<li>' + notes[i] + '</li>'
-    }
-
-    $('#projects').append('<div class="project">' +
-      '<h1><a href="https://' + title + '">' + title + '</a></h1>' +
-      '<p>' + description + '</p>' +
-      '<ul>' + notesText + '</ul>' +
-    '</div>')
   }
 })()
