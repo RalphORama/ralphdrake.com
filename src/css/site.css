@@ -40,9 +40,13 @@
     }
 
     #info, #projects {
-        padding-top: 12pt;
+        padding-top: 1em;
         width: 80%;
         margin: 0 auto;
+    }
+    
+    #info p, #projects p, #projects ul li {
+        line-height: 1.2em;
     }
     
     /* Manually selecting these elements is simpler than asking Showdown to
@@ -84,13 +88,35 @@
         width: 100%;
         height: 100%;
 
-        margin-right: 12pt;
-        margin-bottom: 12pt;
+        margin-right: 1em;
+        margin-bottom: 1em;
 
         border-radius: 16px;
     }
 
     .description p {
-        text-indent: 12pt;
+        text-indent: 1em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #projects h1 {
+        font-size: 2em;
+    }
+    
+    #projects h3, #projects h4 {
+        margin-left: 0;
+    }
+    
+    #projects p {
+        margin-left: 1em;
+    }
+    
+    #projects ul {
+        margin-left: 0;
+    }
+    
+    #projects ul li {
+        padding-left: 0;
     }
 }

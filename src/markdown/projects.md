@@ -44,5 +44,5 @@ My friends and I use the popular service [Discord](https://discordapp.com/) to c
 
 Since I recently became interested in learning Python, I decided a good place to start would be creating some cogs for our instance of the bot. The two cogs I've written so far are still under development, and provide the following functionality:
 
-- mailgun: Provides functionality for sending emails from the Discord server via [Mailgun](https://www.mailgun.com/), an email service I'm very fond of.
-- antidupe: A 'listener' rather than a 'command' - the antidupe module automatically deletes duplicate messages on the Discord server to prevent spam. The code isn't in the public repository yet, but a rough version is available via [this Gist](https://gist.github.com/RalphORama/276bdc3703f44043165e739d34636680)
+- **mailgun**: Provides functionality for sending emails from the Discord server via [Mailgun](https://www.mailgun.com/), an email service I'm very fond of.
+- **antidupe**: A 'listener' rather than a 'command' - the antidupe module automatically deletes duplicate messages on the Discord server to prevent spam. The code isn't in the public repository yet, but a rough version is available via [this Gist](https://gist.github.com/RalphORama/276bdc3703f44043165e739d34636680)
