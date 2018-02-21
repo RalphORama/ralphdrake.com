@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/RalphORama/ralphdrake.com/issues"
   },
-  "homepage": "https://github.com/RalphORama/ralphdrake.com#readme",
+  "homepage": "https://ralphdrake.com/",
   "dependencies": {
     "jquery": "^3.1.1",
     "showdown": "^1.6.4"
@@ -24,6 +24,7 @@
     "grunt-contrib-htmlmin": "^2.3.0",
     "grunt-contrib-uglify": "^2.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-processhtml": "^0.4.1"
+    "grunt-processhtml": "^0.4.1",
+    "grunt-sitemap": "^1.2.1"
   }
 }

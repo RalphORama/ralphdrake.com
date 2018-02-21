@@ -64,7 +64,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: ['*.json', '*.md', '*.ico', '*.png'],
+            src: ['*.json', '*.md', '*.ico', '*.png', '*.txt'],
             dest: 'dist/'
           },
 
@@ -76,6 +76,12 @@ module.exports = function (grunt) {
             dest: 'dist/'
           }
         ]
+      }
+    },
+    sitemap: {
+      dist: {
+        pattern: ['dist/**/*.html'],
+        siteRoot: 'dist/'
       }
     },
     clean: {
@@ -109,9 +115,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.loadNpmTasks('grunt-sitemap')
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   // Default task(s).
   grunt.registerTask('default',
-    ['clean:dist', 'cssmin', 'uglify', 'processhtml', 'htmlmin', 'copy', 'clean:tmp'])
+    ['clean:dist', 'cssmin', 'uglify', 'processhtml', 'htmlmin', 'copy', 'sitemap', 'clean:tmp'])
 }
