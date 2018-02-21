@@ -29,6 +29,7 @@
     footer, footer a, footer a:hover, footer a:visited {
         height: 2em;
         line-height: 2em;
+        font-size: 10pt;
         text-align: center;
 
         color: #FFF;
@@ -44,22 +45,22 @@
         width: 80%;
         margin: 0 auto;
     }
-    
+
     #info p, #projects p, #projects ul li {
         line-height: 1.2em;
     }
-    
+
     /* Manually selecting these elements is simpler than asking Showdown to
        generate a bunch of classes and wrappers. */
-    
+
     #projects h1 {
         font-size: 2em;
     }
-    
+
     #projects h3, #projects h4 {
         margin-left: 2em;
     }
-    
+
     #projects p, #projects ul {
         margin-left: 4em;
     }
@@ -103,19 +104,19 @@
     #projects h1 {
         font-size: 2em;
     }
-    
+
     #projects h3, #projects h4 {
         margin-left: 0;
     }
-    
+
     #projects p {
         margin-left: 1em;
     }
-    
+
     #projects ul {
         margin-left: 0;
     }
-    
+
     #projects ul li {
         padding-left: 0;
     }

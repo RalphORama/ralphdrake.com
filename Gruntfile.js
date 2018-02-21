@@ -2,7 +2,6 @@ module.exports = function (grunt) {
   // Module configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
     // CSS minification
     cssmin: {
       options: {},
@@ -18,7 +17,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     // Javascript minification
     uglify: {
       options: {},
@@ -37,7 +35,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     // Process our index.html to support minified files
     processhtml: {
       options: {},
@@ -47,7 +44,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     // Minify our index.html file
     htmlmin: {
       dist: {
@@ -60,7 +56,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     // Copy over our files we don't modify
     copy: {
       dist: {
@@ -83,10 +78,27 @@ module.exports = function (grunt) {
         ]
       }
     },
-
     clean: {
       dist: ['dist/'],
       tmp: ['tmp/']
+    },
+    watch: {
+      css: {
+        files: ['src/css/*.css'],
+        tasks: ['cssmin:dist']
+      },
+      js: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify:dist']
+      },
+      html: {
+        files: ['src/index.html'],
+        tasks: ['processhtml:dist', 'htmlmin:dist', 'clean:tmp']
+      },
+      copy: {
+        files: ['src/favicon.*', 'src/img/**', 'src/fonts/**', 'src/markdown/**'],
+        tasks: ['copy:dist']
+      }
     }
   })
 
@@ -97,6 +109,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.loadNpmTasks('grunt-contrib-watch')
 
   // Default task(s).
   grunt.registerTask('default',

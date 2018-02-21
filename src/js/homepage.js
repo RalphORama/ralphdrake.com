@@ -7,6 +7,7 @@
     'simplifiedAutoLink': true,
     'tasklists': true
   }
+
   var converter = new showdown.Converter(converterOptions)
 
   var footer = document.getElementsByTagName('footer')[0]
@@ -19,7 +20,7 @@
   function initFooter (callback) {
     console.log('initFooter()...')
     footer.innerHTML = '<span>' +
-      '&copy; ' + today.getFullYear() + ' Ralph Drake' + ' | ' +
+      '&copy; 1998-' + today.getFullYear() + ' Ralph Drake' + ' | ' +
       '<a href="https://github.com/RalphORama/ralphdrake.com">GitHub</a>' +
       '</span>'
 
