@@ -27,7 +27,7 @@ I started hosting a Minecraft server for a small Discord server I joined. One is
 
 ### Accomplishments
 
-Norf Entertainment is a multimedia production company created by me and Adrian Anderson. Its members are some of the best friends I made at the first college I attended. We are currently working on creating the first season of our untitled sketch comedy show.
+Norf Entertainment is a multimedia production company Adrian Anderson and I created. Its members are some of the best friends I made at the first college I attended. We are currently working on creating the first season of our untitled sketch comedy show.
 
 ### Notes
 
